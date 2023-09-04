@@ -128,165 +128,182 @@ table {
   border-spacing: 0;
 }
 
-/* CSS Custom Code */
+/* ----------------------------------------- */
+/* Custom CSS */
+/* ----------------------------------------- */
 
-/* General Styles */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;500;700;900&display=swap");
 
-*,
-*:before,
-*:after {
+* {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  background-color: #d4cea7;
-  color: #252c22;
-}
-
-main {
-  padding: 28px 0;
+  line-height: 1.4;
+  font-weight: 700;
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 16px;
 }
 
-.flex {
+/* Typography ------------------------------- */
+
+.link {
+  text-decoration: none;
+}
+
+/* Header */
+.header {
+  background-color: #f96115;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 14px;
+}
+
+/* main */
+.main {
+  background-color: #d4cea7;
+}
+
+.cards-item {
+  background-color: #005979;
+  color: #d4cea7;
+}
+
+.ordered-list {
+  list-style-type: decimal;
+  list-style-position: outside;
+}
+
+.unordered-list {
+  list-style-type: disc;
+}
+
+.ol-sublist-l1 {
+  list-style-type: decimal;
+}
+
+/* Layout and Spacing ----------------------*/
+.ordered-list,
+.unordered-list,
+.checklist {
+  margin-left: 42px;
+}
+
+.ol-sublist-l1 {
+  margin-left: 36px;
+}
+
+.ul-sublist-l2 {
+  margin-left: 30px;
+  list-style-type: square;
+}
+
+.checklist {
+  list-style-image: url("../media/check-circle.svg");
+  margin-left: 72px;
+}
+
+/* Definitions */
+.term {
+  font-family: "Roboto Mono", monospace;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.definition {
+  color: #686450;
+  font-weight: 700;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* footer */
+.footer {
+  background-color: #252c22;
+}
+
+.link-footer {
+  color: #eed5ab;
+  font-size: 14px;
+}
+
+/* Layout and Spacing */
+.nav-list {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
+  /* gap: 24px; */
 }
 
-.justify-flexstart {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+.nav-item {
+  margin-left: 24px;
 }
 
-.cards-flex {
+.header {
+  padding: 24px 0;
+  /* margin-bottom: 24px; */
+}
+
+/* cards */
+
+.cards {
+  padding: 36px 16px 48px;
+}
+
+.cards-list {
   display: flex;
   justify-content: space-around;
   align-items: stretch;
 }
 
-ul {
-  list-style-type: disc;
+.cards-item {
+  flex: 0 1 350px;
+  box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0.7);
 }
 
-ol {
-  list-style-type: decimal;
+.card {
+  padding: 24px 0;
 }
 
-ul,
-ol {
-  padding-left: 40px;
+.ol-item,
+.cl-item,
+.ul-item {
+  line-height: 1.8;
 }
 
-/* ----------------header---------------------- */
+/* definition list */
 
-/* typography */
-.nav-bar {
-  background-color: #f96115;
-}
-
-.nav-menu a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 700;
-}
-
-.nav-bar li {
-  list-style-type: none;
-  padding: 0;
-}
-
-/* layout */
-.nav-bar {
-  padding: 20px 0;
-}
-
-.nav-menu li {
-  margin-right: 32px;
-}
-
-/* ----------------cards---------------------- */
-
-/* typography */
-.menu {
-  background-color: #005979;
-  color: #d4cea6;
-  font-weight: 400;
-  font-size: 18px;
-  box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.5);
-  flex: 0 1 32%;
-}
-
-.menu-level3 {
-  list-style-type: square;
-}
-
-/* layout */
-.menu {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-
-.check-list {
-  list-style-type: none;
-}
-
-.check-list li::before {
-  content: "";
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  margin-right: 12px;
-  background-image: url("/assets/media/icons8-tick-box.svg");
-}
-
-.check-list li {
-  margin-bottom: 12px;
-}
-
-.card-3 .check-list li:last-child {
-  margin: 0;
-}
-
-.cards {
-  margin-bottom: 40px;
-}
-
-/* ----------------Definitions---------------------- */
-
-/* typography */
-.term {
-  font-family: "Roboto Mono", monospace;
-  font-size: 26px;
-  font-weight: 500;
+.definitions {
+  padding-bottom: 48px;
 }
 
 .definition {
-  font-size: 18px;
-  color: #686c75;
+  margin-left: 16px;
+  line-height: 1.8;
+  margin-top: 8px;
+  margin-bottom: 16px;
 }
 
-/* layout */
-.definition {
-  padding-left: 32px;
-  margin: 8px 0 16px;
+.definition:last-child {
+  margin-bottom: 0;
 }
 
-/* ----------------footer---------------------- */
+/* footer */
+.link-list {
+  display: flex;
+  gap: 32px;
+}
+.link-item:first-child {
+  margin-left: 12px;
+}
 
-/* typography */
 .footer {
-  background-color: #252c22;
-  color: #f8f6ec;
-  padding: 40px;
+  padding: 32px 0;
 }
