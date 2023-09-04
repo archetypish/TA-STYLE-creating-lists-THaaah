@@ -1,0 +1,309 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ----------------------------------------- */
+/* Custom CSS */
+/* ----------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;500;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Typography ------------------------------- */
+
+.link {
+  text-decoration: none;
+}
+
+/* Header */
+.header {
+  background-color: #f96115;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 14px;
+}
+
+/* main */
+.main {
+  background-color: #d4cea7;
+}
+
+.cards-item {
+  background-color: #005979;
+  color: #d4cea7;
+}
+
+.ordered-list {
+  list-style-type: decimal;
+  list-style-position: outside;
+}
+
+.unordered-list {
+  list-style-type: disc;
+}
+
+.ol-sublist-l1 {
+  list-style-type: decimal;
+}
+
+/* Layout and Spacing ----------------------*/
+.ordered-list,
+.unordered-list,
+.checklist {
+  margin-left: 42px;
+}
+
+.ol-sublist-l1 {
+  margin-left: 36px;
+}
+
+.ul-sublist-l2 {
+  margin-left: 30px;
+  list-style-type: square;
+}
+
+.checklist {
+  list-style-image: url("../media/check-circle.svg");
+  margin-left: 72px;
+}
+
+/* Definitions */
+.term {
+  font-family: "Roboto Mono", monospace;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.definition {
+  color: #686450;
+  font-weight: 700;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* footer */
+.footer {
+  background-color: #252c22;
+}
+
+.link-footer {
+  color: #eed5ab;
+  font-size: 14px;
+}
+
+/* Layout and Spacing */
+.nav-list {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  /* gap: 24px; */
+}
+
+.nav-item {
+  margin-left: 24px;
+}
+
+.header {
+  padding: 24px 0;
+  /* margin-bottom: 24px; */
+}
+
+/* cards */
+
+.cards {
+  padding: 36px 16px 48px;
+}
+
+.cards-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.cards-item {
+  flex: 0 1 350px;
+  box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0.7);
+}
+
+.card {
+  padding: 24px 0;
+}
+
+.ol-item,
+.cl-item,
+.ul-item {
+  line-height: 1.8;
+}
+
+/* definition list */
+
+.definitions {
+  padding-bottom: 48px;
+}
+
+.definition {
+  margin-left: 16px;
+  line-height: 1.8;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.definition:last-child {
+  margin-bottom: 0;
+}
+
+/* footer */
+.link-list {
+  display: flex;
+  gap: 32px;
+}
+.link-item:first-child {
+  margin-left: 12px;
+}
+
+.footer {
+  padding: 32px 0;
+}
